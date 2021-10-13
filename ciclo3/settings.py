@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'PharmaWeb',
-   
+    'PharmaWeb',  
 ]
 SIMPLE_JWT = {
             'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
@@ -60,10 +59,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
+    
 ]
-CORS_ALLOWED_ORIGINS = []
-CORS_ALLOW_ALL_ORIGINS = True
+
 REST_FRAMEWORK = {
             'DEFAULT_PERMISSION_CLASSES': (
             'rest_framework.permissions.AllowAny',
