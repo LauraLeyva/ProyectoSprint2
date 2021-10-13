@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'PharmaWeb',
-    'corsheaders',
+   
 ]
 SIMPLE_JWT = {
             'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
