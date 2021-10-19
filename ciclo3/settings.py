@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-0cx+2(!*%$_7+*5bsu-3g)ed0*hzq6cqti^e(#-975e88$gcb)
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
+CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'PharmaWeb',  
+    'PharmaWeb', 
+    'corsheaders', 
 ]
 SIMPLE_JWT = {
             'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
@@ -59,6 +60,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     
 ]
 
