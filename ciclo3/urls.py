@@ -14,8 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-from rest_framework_simplejwt.views import (
-    TokenObtainPairView, TokenRefreshView)
+from rest_framework_simplejwt.views import (TokenObtainPairView, TokenRefreshView)
 from PharmaWeb import views
 from PharmaWeb.views import entidad_api_view
 from PharmaWeb.views import entidad_detalle_api_view
@@ -82,5 +81,4 @@ urlpatterns = [
     path('formulaencabezadoCreateView/',FormulaEncabezado_api_view,name='FormulaEncabezado_detalle_api'),
     path('formulaencabezadoCreateView/<int:pk>/',FormulaEncabezado_detalle_api_view,name='FormulaEncabezado_detalle_api'),
     path('formuladetalleCreateView/',FormulaDetalle_api_view,name='FormulaDetalle_detalle_api'),
-    path('formuladetalleCreateView/<int:pk>/', FormulaDetalle_detalle_api_view,name='FormulaDetalle_detalle_api'),
-    ]
+    path('formuladetalleCreateView/<int:pk>/', FormulaDetalle_detalle_api_view,name='FormulaDetalle_detalle_api'),]

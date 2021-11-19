@@ -26,8 +26,6 @@ SECRET_KEY = 'django-insecure-0cx+2(!*%$_7+*5bsu-3g)ed0*hzq6cqti^e(#-975e88$gcb)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
-CORS_ALLOW_ALL_ORIGINS = True
 
 # Application definition
 
@@ -40,13 +38,12 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'PharmaWeb', 
-    'corsheaders', 
 ]
 SIMPLE_JWT = {
-            'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+            'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
             'REFRESH_TOKEN_LIFETIME': timedelta(days=1),
             'ROTATE_REFRESH_TOKENS': False,
-            'BLACKLIST_AFTER_ROTATION': True,
+            'BLACKLIST_AFTER_ROTATION': False,
             'UPDATE_LAST_LOGIN': False,
             'ALGORITHM': 'HS256',
             'USER_ID_FIELD': 'id',
@@ -60,7 +57,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    "corsheaders.middleware.CorsMiddleware",
     
 ]
 
@@ -100,10 +96,10 @@ WSGI_APPLICATION = 'ciclo3.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'dfn25ntvjve2am',
-        'USER': 'yvzceinogwbzbi',
-        'PASSWORD': 'd634d60d1b9bc24cec1c89adee2c9bc57ad0ff262073315389f0ff84d5699d70',
-        'HOST': 'ec2-23-23-128-222.compute-1.amazonaws.com',
+        'NAME': 'd6kb38k6416lni',
+        'USER': 'oldkvkxrlqfyze',
+        'PASSWORD': 'aad5d84278589cf3237b1bf442b5b763bd08595a8c3936467942ad1fc830bcc9',
+        'HOST': 'ec2-54-167-168-52.compute-1.amazonaws.com',
         'PORT': '5432',
     }
 }
