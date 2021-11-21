@@ -1,3 +1,5 @@
 from .accountSerializer import AccountSerializer
 from .userSerializer import UserSerializer
 from .EntidadesSerializer import EntidadesSerializer
+from .medicamentosSerializer import MedicamentosSerializer
+from .LaboratoriosSerializer import LaboratoriosSerializer

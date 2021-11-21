@@ -1,11 +1,10 @@
 from rest_framework import status, views
 from rest_framework.response import Response
 from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
-
 from PharmaWeb.serializers.medicamentosSerializer import MedicamentosSerializer
-
 from rest_framework.decorators import api_view
 from PharmaWeb.models import Medicamentos
+
 @api_view(['GET', 'POST'])
 def Medicamentos_api_view(request):
     if request.method == 'GET':

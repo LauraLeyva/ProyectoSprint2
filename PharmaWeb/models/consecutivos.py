@@ -1,5 +1,4 @@
 from django.db import models
-
 from PharmaWeb.models.entidades import Entidades
 
 
