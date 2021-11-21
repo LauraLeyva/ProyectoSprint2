@@ -26,14 +26,13 @@ def Medicamentos_detalle_api_view(request, pk=None):
         entidades_serializer = MedicamentosSerializer(entidades)
         return Response(entidades_serializer.data)
     elif request.method == 'PUT':
-        entidades = Medicamentos.objects.filter(id_Medicamentos = pk).first()
-        entidades_serializer = MedicamentosSerializer(
-            entidades, data=request.data)
+        entidades = Medicamentos.objects.filter(id_Medicamento = pk).first()
+        entidades_serializer = MedicamentosSerializer(entidades, data=request.data)
         if entidades_serializer.is_valid():
             entidades_serializer.save()
             return Response(entidades_serializer.data)
         return Response(entidades_serializer.error_messages)
     elif request.method == 'DELETE':
-        entidades = Medicamentos.objects.filter(id_Medicamentos = pk).first()
+        entidades = Medicamentos.objects.filter(id_Medicamento = pk).first()
         entidades.delete()
         return Response('Eliminacion Exitosa')

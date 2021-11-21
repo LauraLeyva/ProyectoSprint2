@@ -26,8 +26,7 @@ def consecutivo_detalle_api_view(request, pk=None):
         return Response(entidades_serializer.data)
     elif request.method == 'PUT':
         entidades = Consecutivos.objects.filter(id_Consecutivo=pk).first()
-        entidades_serializer = ConsecutivosSerializer(
-            entidades, data=request.data)
+        entidades_serializer = ConsecutivosSerializer( entidades, data=request.data)
         if entidades_serializer.is_valid():
             entidades_serializer.save()
             return Response(entidades_serializer.data)
